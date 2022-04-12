@@ -1,0 +1,16 @@
+*{
+box-sizing: border-box;
+color: brown;
+}
+.wrapper{
+    display: grid;
+    gap: 20px;
+}
+.header nav ul{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4,1fr);
+    color: blue;
+    font-size: large;
+    background-color: aqua;
+}
