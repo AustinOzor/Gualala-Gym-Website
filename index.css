@@ -16,7 +16,7 @@ h1 {
 .header nav ul {
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     color: blue;
     font-size: large;
     background-color: aqua;
