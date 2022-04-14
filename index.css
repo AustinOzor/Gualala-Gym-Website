@@ -8,20 +8,24 @@ body{
 .wrapper {
     display: grid;
     gap: 20px;
-    margin: 3rem;
+    margin:2rem 4rem;
+    height: 100%;
 }
 /*Main-header*/
 .main-header{
- display: flex;
+ display: grid;
+ grid-template-columns: 1fr;
  justify-content: center; 
- max-width: 100%;
-background-color: #fff;
-box-shadow: 0px  10px rgba(165, 42, 42, 1);
+ width: 100%;
+ box-shadow: 0 5px 5px rgb(255, 255, 255);
+ border-radius: 15px  25px 15px ;
+/* background-color: #fff; */
+/* box-shadow: 0px  10px rgba(165, 42, 42, 1); */
 }
 .main-header h1{
-    color:black;
+    color:black white;
     font-size: 4rem;
-    text-shadow: 2px 2px 1px red;
+    /* text-shadow: 2px 2px 1px red; */
 
 }
 .main-header i{
@@ -30,7 +34,7 @@ box-shadow: 0px  10px rgba(165, 42, 42, 1);
 }
 .header{
     display: grid;
-    gap: 50px;
+    gap: 20px;
     grid-template-areas: 
     'navbar hero'
     'navbar hero'
@@ -39,8 +43,8 @@ box-shadow: 0px  10px rgba(165, 42, 42, 1);
 @media screen and (max-width:1000px) {
     .header{
         grid-template-areas: 
-        'navbar navabr'
-        'hero hero'
+        'navbar '
+        'hero '
         }
     .header .navbar{
         grid-template-columns: 1fr;
@@ -55,7 +59,7 @@ box-shadow: 0px  10px rgba(165, 42, 42, 1);
 .navbar {
     grid-area: navbar;
     width: 400px;
-    border-right: 1px solid white;
+    /* border-right: 1px solid white; */
 }
 .header nav ul {
     display: grid;
@@ -87,12 +91,14 @@ box-shadow: 0px  10px rgba(165, 42, 42, 1);
     background-image: url(images/anastase-maragos-9dzWZQWZMdE-unsplash.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment:scroll;
 
 }
 h1 {
     text-align: center;
     font-size: 3rem;
     color: white;
+    padding-top: 0;
 }
 
 .hero p{
@@ -123,38 +129,213 @@ h1 {
 
 }
 
+/*Stats*/
+.stats{
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 3rem;
+    margin-bottom: 3rem; 
+    border-radius: 15px 25px 15px;}
+@media screen and (max-width:1000px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
+.stats{
+    color: white;
+    text-align: center;
+    padding: 3.5rem 2rem;
+     box-shadow:  2px 5px  rgb(255, 255, 255);
+}
+.stats:hover{
+    box-shadow: 0 10px 10px rgb(255, 255, 255);
+    border: 1px solid crimson;
+}
+.stat i:hover{
+    transform:scale(2) ;
+    transition: width 2s, height 2s, transform ;
+}
+.stat p{
+    color: white;
+    font-size: 1.5rem;
+}
+/*Services*/
 h2 {
-        text-align: center;
-        padding-top: 2rem;
-        color: white;
- }
+    text-align: center;
+    color: white;
+    padding: 2rem 0;
+}
 .gym-services{
     display: grid;
-    gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    grid-template-columns:repeat(5,1fr);
     justify-content: center;
-    padding-top: 2rem;
+    padding-top: 1rem;
+}
+@media screen and (max-width:1000px) {
+    .gym-services {
+        grid-template-columns: 1fr;
+    }
+    .card{
+        display: block;
+    }
 }
 .card{
-    background-color:#fff;
-    max-width: 300px;
+    /* background-color:#fff; */
+    max-width:400px;
     text-align: center;
-    box-shadow: 0 1px 5px rgb(255, 255, 255);
+    /* box-shadow: 0 1px 5px rgb(255, 255, 255); */
     border-radius: 10px;
 }
+.card:hover{
+    box-shadow: 0 10px 10px rgb(255, 255, 255);
+    border: 1px solid crimson;
+}
 .card-title{
-    color:brown;
+    color:white;
     font-size: 1.2rem;
     padding-top: 1rem;
 }
-.card-text{
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: center;
-    padding: 1rem;
+.card a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding:2rem;
 }
 .gym-services img{ 
-    max-width: 300px;
+    width: 100%;
     gap: 10px;
+    border-radius:05  10px ;
+    
+}
+.gym-services1 {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    padding-top: 1rem;
+}
+@media screen and (max-width:1000px) {
+    .gym-services1 {
+        grid-template-columns: 1fr;
+    }
+
+    .card1 {
+        display: block;
+    }
+}
+
+.card1 {
+    /* background-color:#fff; */
+    max-width: 400px;
+    text-align: center;
+    /* box-shadow: 0 1px 5px rgb(255, 255, 255); */
+    border-radius: 10px;
+}
+
+.card1:hover {
+    box-shadow: 0 10px 10px rgb(255, 255, 255);
+    border: 1px solid crimson;
+}
+
+.card1-title {
+    color: white;
+    font-size: 1.2rem;
+    padding-top: 1rem;
+}
+
+.card1 a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+
+.gym-services1 img {
+    width: 100%;
+    gap: 10px;
+    border-radius: 05 10px;
+
+}
+/*Info*/
+.info{
+    display: grid;
+    gap: 30px;
+    margin-top: 6rem;
+    grid-template-areas: 
+    'info1 info2'
+    'info1  info2'
+    ;
+}
+@media screen and (max-width:1000px) {
+    .info{
+        grid-template-areas: 
+        'info1  info1'
+        'info2 info2'
+        ;
+    }
+}
+.info1{
+    grid-area: info1;
+}
+.info h3, p{
+    color: #fff;
+    
+}
+.info h3{
+    font-size: 1.4rem;
+    text-align: center;
+}
+.info i{
+    color: white;
+    padding: 1rem;
+    
+}
+.info2{
+    grid-area: info2;
+}
+.info img{
+    max-width: 600px;
+    border-radius: 35px 0 45px;
+}
+/*trainers*/
+.trainers{
+    display: grid;
+    /* grid-template-columns: repeat(3,400px); */
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    /* justify-content: center; */
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+}
+.t-div{
+  /* background:linear-gradient(white,#ccc, black); */
+  border-radius: 12px 35px 45px;
+}
+#th3{
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+.trainers img{
+    width: 300px;
+    height:300px;
+    border-radius: 12px 35px 45px;
+    
+}
+.trainers p{
+    /* text-align: center; */
+    font-size: 1.1rem;
+    font-weight: 800;
+    
+}
+@media screen and (max-width:1000px) {
+    .trainers {
+        grid-template-columns: 1fr;
+    }
 }
